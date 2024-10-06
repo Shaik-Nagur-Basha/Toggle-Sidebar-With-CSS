@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: "Poppins", sans-serif;
+        }
+        .main_box {
+          background: url("photo.jpg");
+          height: 100vh;
+          background-size: cover;
+        }
+        .btn_one i {
+          color: white;
+          font-size: 30px;
+          font-weight: 700;
+          left: 32px;
+          top: 16px;
+          position: absolute;
+          line-height: 60px;
+          opacity: 0.9;
+          cursor: pointer;
+        }
+        .sidebar_menu {
+          position: fixed;
+          height: 100vh;
+          width: 300px;
+          background-color: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+          left: -350px;
+          transition: 0.5s;
+        }
+        .logo {
+          /* border: 2px solid red; */
+          margin-bottom: 0.5rem;
+          display: flex;
+          height: 3.5rem;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 1px 2px #ffffffcc;
+        }
+        .logo>a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .btn_two i {
+          font-size: 23px;
+          color: white;
+          /* border: 2px solid yellow; */
+          transform: translate(3rem, 0);
+          cursor: pointer;
+          opacity: 0.6;
+          transition: 0.3s;
+        }
+        .sidebar_menu>.menu {
+          position: absolute;
+        }
+        .social_media {
+          position: relative;
+          text-align: center;
+          z-index: 1;
+          top: 40rem;
+          height: 2rem;
+          place-content: center;
+        }
+        .social_media>ul {
+          height: 100%;
+        }
+        .social_media>ul a i {
+          width: 20px;
+        }
+        .social_media>ul a i {
+          color: white;
+          opacity: 0.5;
+          transition: 0.4s;
+        }
+        .social_media>ul a i:hover {
+          opacity: 0.9;
+          font-size: 105%;
+        }
+        .menu div a, .menu div {
+          color: white;
+          text-decoration: none;
+        }
+        .menu div {
+          /* border: 2px solid red; */
+          place-content: center;
+          height: 3rem;
+          width: 300px;
+          transition: 0.7s;
+          opacity: 0.6;
+        }
+        .menu div:hover {
+          box-shadow: 1px 0 5px white;
+          opacity: 0.9;
+        }
+        .btn_two i:hover {
+          opacity: 0.9;
+        }
+        #check {
+          display: none;
+        }
+        #check:checked ~ .sidebar_menu {
+          left: 0;
+        }
+        #check:checked ~ .btn_one {
+          opacity: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main_box">
+      <input type="checkbox" id="check" />
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="sidebar_menu">
+        <div class="logo">
+          <a href="#">Apna College</a>
+          <div class="btn_two">
+            <label for="check" style="color: grey">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+          </div>
+        </div>
+
+
+        <div class="menu">
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-image"></i>&nbsp;&nbsp;
+              <a href="#">Gallery</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;&nbsp;
+              <a href="#">Shortcuts</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-photo-film"></i>&nbsp;&nbsp;
+              <a href="#">Exhibits</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;
+              <a href="#">Events</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-store"></i>&nbsp;&nbsp;
+              <a href="#">Store</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;
+              <a href="#">Contact</a>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="fa-regular fa-comments"></i>&nbsp;&nbsp;
+              <a href="#">Feedback</a>
+            </div>
+        </div>
+
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
